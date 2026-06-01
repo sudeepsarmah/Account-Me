@@ -28,7 +28,7 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 py-12">
+                <div className="mx-auto mt-12 max-w-6xl">
 
                     {/* Feature 1 */}
                     <div className="grid grid-cols-1 gap-8 items-center py-12 lg:grid-cols-2">
@@ -41,11 +41,11 @@ export default function LandingPage() {
 
                         <div className="max-w-full px-4 text-center lg:text-left">
 
-                            <h3 className="max-w-full px-4 text-center lg:text-left">
+                            <h3 className="text-2xl sm:text-3xl font-extrabold text-lime-500 wrap-break-word">
                                 Ask your friend to be your helper.
                             </h3>
 
-                            <p className="mt-6 text-zinc-900 md:text-lg leading-relaxed wrap-break-word font-mono">
+                            <p className="mt-6 text-base md:text-lg leading-relaxed wrap-break-word font-mono">
                                 Send your friend an invite link, ask them to accept, once they do,
                                 they can track your tasks, help you get through the rough phases
                                 and finally finish all your tasks on time.
@@ -57,14 +57,18 @@ export default function LandingPage() {
 
                     {/* Feature 2 */}
                     <div className="grid grid-cols-1 gap-8 items-center py-12 lg:grid-cols-2">
+                        <img
+                            className="block w-full max-w-70 sm:max-w-sm mx-auto rounded-2xl shadow-lg object-contain lg:order-2"
+                            src={tasksRating}
+                            alt="screenshot2"
+                        />
+                        <div className=" max-w-full px-4 text-center lg:text-left">
 
-                        <div className="text-2xl sm:text-3xl font-extrabold text-lime-500 wrap-break-word">
-
-                            <h3 className="max-w-full px-4 text-center lg:text-left">
+                            <h3 className="mb-6 text-2xl font-extrabold text-lime-500 md:text-3xl">
                                 Get rated on your tasks after you check-in.
                             </h3>
 
-                            <p className="mt-6 text-zinc-900 md:text-lg leading-relaxed wrap-break-word font-mono">
+                            <p className="mt-6 text-base md:text-lg leading-relaxed wrap-break-word font-mono">
                                 Your partners get notified if you completed your task on time
                                 (or if you missed it), get marks for your tasks and look to
                                 improve over time.
@@ -72,11 +76,7 @@ export default function LandingPage() {
 
                         </div>
 
-                        <img
-                            className="block w-full max-w-70 sm:max-w-sm mx-auto rounded-2xl shadow-lg object-contain"
-                            src={tasksRating}
-                            alt="screenshot2"
-                        />
+
 
                     </div>
 
@@ -89,13 +89,13 @@ export default function LandingPage() {
                             alt="screenshot3"
                         />
 
-                        <div className="text-2xl sm:text-3xl font-extrabold text-lime-500 wrap-break-word">
+                        <div className="max-w-full px-4 text-center lg:text-left">
 
-                            <h3 className="max-w-full px-4 text-center lg:text-left">
+                            <h3 className="mb-6 text-2xl font-extrabold text-lime-500 md:text-3xl">
                                 Earn and maintain your streak!!
                             </h3>
 
-                            <p className="mt-6 text-zinc-900 md:text-lg leading-relaxed wrap-break-word font-mono">
+                            <p className="mt-6 text-base md:text-lg leading-relaxed wrap-break-word font-mono">
                                 Complete on time and don't miss a day, otherwise your streak
                                 will be lost in the abyss.
                             </p>
