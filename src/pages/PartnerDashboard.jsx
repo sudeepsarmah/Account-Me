@@ -98,7 +98,7 @@ export default function PartnerDashboard() {
     }
 
     return (
-        <section className="mx-auto max-w-6xl px-12 py-12">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 py-12">
             <div className="mb-12">
                 <h1 className="font-serif text-5xl font-extrabold tracking-wide">
                     Check your partner's task details here.
@@ -108,7 +108,7 @@ export default function PartnerDashboard() {
                 </p>
             </div>
             <button onClick={() => navigate('/dashboard')}
-                className="w-80
+                className="w-full max-w-xs
                         rounded-2xl
                         bg-amber-500
                         px-8
@@ -146,9 +146,11 @@ export default function PartnerDashboard() {
                             transition-all">
                             {/* Collapsed header — always visible, except in expanded view */}
                             {!expandedTasks[task.task_key] && (
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <h3 className="text-xl font-bold">
+                                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                                    <div className="min-w-0 flex-1">
+                                        <h3
+                                            className="text-xl font-bold wrap-break-word"
+                                        >
                                             {task.title}
                                         </h3>
 
@@ -188,10 +190,10 @@ export default function PartnerDashboard() {
                                 <div className="space-y-6">
 
                                     {/* Header */}
-                                    <div className="flex items-start justify-between">
+                                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
 
                                         <div>
-                                            <h3 className="text-3xl font-extrabold">
+                                            <h3 className="text-2xl md:text-3xl font-extrabold wrap-break-word">
                                                 {task.title}
                                             </h3>
 
@@ -236,29 +238,6 @@ export default function PartnerDashboard() {
 
                                     </div>
 
-                                    {/* Evidence */}
-                                    <div className="rounded-2xl border border-zinc-200 p-5">
-                                        <h4 className="mb-4 text-lg font-bold">
-                                            {task.status === "pending" ? "Not checked-in yet" : "Evidence"}
-                                        </h4>
-                                        {task.status === "checkedIn" && !task.signedUrl && (
-                                            <div className="
-                                            rounded-xl
-                                            bg-amber-50
-                                            p-4
-                                            text-amber-700">
-                                                No Photo Uploaded Yet
-                                            </div>)}
-                                        {task.signedUrl && (
-                                            <img src={task.signedUrl}
-                                                alt="evidence"
-                                                className="
-                                                max-h-96
-                                                rounded-2xl
-                                                border
-                                                object-cover"/>)}
-                                    </div>
-
                                     {/* Bottom Section */}
                                     <div className="grid gap-6 md:grid-cols-2">
 
@@ -284,6 +263,27 @@ export default function PartnerDashboard() {
                                             )}
 
                                         </div>
+
+                                        {/* Evidence */}
+                                        <div className="rounded-2xl border border-zinc-200 p-5">
+                                            <h4 className="mb-4 text-lg font-bold">
+                                                {task.status === "pending" ? "Not checked-in yet" : "Evidence"}
+                                            </h4>
+                                            {task.status === "checkedIn" && !task.signedUrl && (
+                                                <div className="
+                                            rounded-xl
+                                            bg-amber-50
+                                            p-4
+                                            text-amber-700">
+                                                    No Photo Uploaded Yet
+                                                </div>)}
+                                            {task.signedUrl && (
+                                                <img src={task.signedUrl}
+                                                    alt="evidence"
+                                                    className="w-full max-w-full max-h-96 rounded-2xl border object-contain" />)}
+                                        </div>
+
+
 
                                         {/* Rating Area */}
                                         <div>
@@ -313,7 +313,7 @@ export default function PartnerDashboard() {
 
                                                     <div
                                                         role="group"
-                                                        className="starability-basic"
+                                                        className="starability-basic "
                                                         onChange={(e) =>
                                                             handleRatings(e, task.task_key)
                                                         }
@@ -382,23 +382,12 @@ export default function PartnerDashboard() {
                                                             5 stars
                                                         </label>
 
-                                                        <div className="mt-6">
+                                                        <div className="mt-14">
                                                             <button
                                                                 onClick={(e) =>
                                                                     handleRatingsSubmit(e, task)
                                                                 }
-                                                                className="
-                                                                    rounded-2xl
-                                                                    bg-lime-500
-                                                                    px-6
-                                                                    py-3
-                                                                    font-bold
-                                                                    text-white
-                                                                    shadow-[0_3px_0_rgb(74,124,0)]
-                                                                    transition-all
-                                                                    hover:bg-lime-400
-                                                                    active:translate-y-0.5
-                                                                    active:shadow-none"
+                                                                className="rounded-2xl bg-lime-500  px-6 py-3 font-bold text-white shadow-[0_3px_0_rgb(74,124,0)] transition-all hover:bg-lime-400 active:translate-y-0.5 active:shadow-none"
                                                             >
                                                                 Submit Rating
                                                             </button>

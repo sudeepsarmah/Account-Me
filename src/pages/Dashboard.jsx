@@ -350,7 +350,7 @@ export default function Dashboard() {
                             <button
                                 type="submit"
                                 className="
-                                w-80
+                                w-full max-w-xs
                                 rounded-2xl
                                 bg-lime-500
                                 px-8
@@ -434,7 +434,7 @@ export default function Dashboard() {
                             onChange={updatePartnerEmail}
                             id="partner-email"
                             placeholder="Partner email"
-                            className="w-80 border-2 rounded-2xl border-zinc-300 px-5 py-3 text-lg font-medium outline-none transition-all focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
+                            className="w-full max-w-xs border-2 rounded-2xl border-zinc-300 px-5 py-3 text-lg font-medium outline-none transition-all focus:border-sky-400 focus:ring-4 focus:ring-sky-100"
                         />
 
                         <div className="flex gap-4">
@@ -587,7 +587,7 @@ export default function Dashboard() {
                 <div className="flex justify-center">
                     <button onClick={handleLogout}
                         className="
-                        w-80
+                        w-full max-w-xs
                         rounded-2xl
                         bg-rose-700
                         px-8

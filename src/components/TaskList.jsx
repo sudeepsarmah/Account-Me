@@ -48,10 +48,12 @@ export default function TaskList({ tasks, onCheckIn, taskMessages }) {
 
                         {/* Compact View */}
                         {!expandedTasks[task.task_key] && (
-                            <div className="flex items-center justify-between">
+                            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
-                                <div>
-                                    <h3 className="text-xl font-bold">
+                                <div className="min-w-0 flex-1">
+                                    <h3
+                                        className="text-xl font-bold wrap-break-word"
+                                    >
                                         {task.title}
                                     </h3>
 
@@ -98,10 +100,10 @@ export default function TaskList({ tasks, onCheckIn, taskMessages }) {
                         {expandedTasks[task.task_key] && (
                             <div className="space-y-6">
 
-                                <div className="flex items-start justify-between">
+                                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
 
                                     <div>
-                                        <h3 className="text-2xl font-extrabold">
+                                        <h3 className="text-2xl md:text-3xl font-extrabold wrap-break-word">
                                             {task.title}
                                         </h3>
 
@@ -175,12 +177,7 @@ export default function TaskList({ tasks, onCheckIn, taskMessages }) {
                                         <img
                                             src={task.signedUrl}
                                             alt="evidence"
-                                            className="
-                                            max-h-72
-                                            rounded-2xl
-                                            border
-                                            object-cover
-                                        "
+                                            className="w-full max-w-full max-h-96 rounded-2xl border object-contain"
                                         />
                                     </div>
                                 )}

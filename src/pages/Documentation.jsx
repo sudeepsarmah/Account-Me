@@ -10,7 +10,7 @@ export default function DocumentationBox() {
 
                 {/* Hero */}
                 <div className="mb-20">
-                    <h1 className="mb-6 text-center font-serif text-6xl font-extrabold tracking-wide">
+                    <h1 className="mb-6 text-center font-serif text-4xl font-extrabold tracking-wide md:text-7xl">
                         Everything you need to get started.
                     </h1>
 
@@ -188,7 +188,7 @@ export default function DocumentationBox() {
                     <button
                         onClick={() => navigate('/signup')}
                         className="
-                        w-80
+                        w-full max-w-xs
                         rounded-2xl
                         bg-yellow-400
                         px-8

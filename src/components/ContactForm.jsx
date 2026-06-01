@@ -186,7 +186,7 @@ export default function ContactForm() {
                                 type="submit"
                                 disabled={!isVerified}
                                 className="
-                                w-80
+                                w-full max-w-xs
                                 rounded-2xl
                                 bg-lime-500
                                 px-8
