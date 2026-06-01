@@ -39,13 +39,13 @@ export default function LandingPage() {
                             alt="screenshot1"
                         />
 
-                        <div className="max-w-full px-4 text-center lg:text-left">
+                        <div className="text-2xl sm:text-3xl font-extrabold text-lime-500 wrap-break-word">
 
                             <h3 className="max-w-full px-4 text-center lg:text-left">
                                 Ask your friend to be your helper.
                             </h3>
 
-                            <p className="mt-6 text-base md:text-lg leading-relaxed wrap-break-word font-mono">
+                            <p className="mt-6 text-zinc-900 md:text-lg leading-relaxed wrap-break-word font-mono">
                                 Send your friend an invite link, ask them to accept, once they do,
                                 they can track your tasks, help you get through the rough phases
                                 and finally finish all your tasks on time.
@@ -64,7 +64,7 @@ export default function LandingPage() {
                                 Get rated on your tasks after you check-in.
                             </h3>
 
-                            <p className="mt-6 text-base md:text-lg leading-relaxed wrap-break-word font-mono">
+                            <p className="mt-6 text-zinc-900 md:text-lg leading-relaxed wrap-break-word font-mono">
                                 Your partners get notified if you completed your task on time
                                 (or if you missed it), get marks for your tasks and look to
                                 improve over time.
@@ -95,7 +95,7 @@ export default function LandingPage() {
                                 Earn and maintain your streak!!
                             </h3>
 
-                            <p className="mt-6 text-base md:text-lg leading-relaxed wrap-break-word font-mono">
+                            <p className="mt-6 text-zinc-900 md:text-lg leading-relaxed wrap-break-word font-mono">
                                 Complete on time and don't miss a day, otherwise your streak
                                 will be lost in the abyss.
                             </p>
