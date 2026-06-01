@@ -1,0 +1,20 @@
+.tasklist{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.upload-files{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+}
+
+.upload-files input{
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    width: 400px;
+}
