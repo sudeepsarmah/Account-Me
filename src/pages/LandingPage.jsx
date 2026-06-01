@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom"
-import inviteScreenshot from "../assets/inviteScreenshot.png"
+import inviteScreenshot from "../assets/InviteScreenshot.png"
 import tasksRating from "../assets/TasksRating.png"
 import streaks from "../assets/Streaks.png"
 
