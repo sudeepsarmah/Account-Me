@@ -277,36 +277,31 @@ export default function Dashboard() {
         <>
             <section className="mx-auto max-w-6xl px-4 py-8 md:px-12 md:py-12">
                 {/* Header */}
-                <div className="mb-12">
-                    <h1 className="font-serif text-3xl font-extrabold tracking-wide md:text-5xl">
-                        Welcome back,
-                        <span className="block text-lime-500 md:ml-3 md:inline">
-                            {username}
-                        </span>
-                    </h1>
+                <div
+                    className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between"
+                >
+                    <div>
+                        <h1 className="font-serif text-3xl font-extrabold tracking-wide md:text-5xl">
+                            Welcome back,
+                            <span className="block text-lime-500 md:ml-3 md:inline">
+                                {username}
+                            </span>
+                        </h1>
+                        <p className="mt-4 max-w-2xl font-mono text-lg text-zinc-600">
+                            Stay accountable, complete your tasks, and keep your streak alive.
+                        </p>
 
-                    <p className="mt-4 max-w-2xl font-mono text-lg text-zinc-600">
-                        Stay accountable, complete your tasks, and keep your streak alive.
-                    </p>
-                </div>
-                <div className="flex justify-center">
+                    </div>
+
                     <button
                         onClick={() => navigate('/partner-dashboard')}
-                        className="
-                        w-full max-w-xs
-                        rounded-2xl
-                        bg-amber-500
-                        px-8
-                        py-4
-                        mb-8
-                        font-extrabold
-                        uppercase
-                        text-white
-                        shadow-[0_4px_0_rgb(74,124,0)]
-                        cursor-pointer
-                        transition-all
-                        hover:bg-amber-400">Partners-Dashboard</button>
+                        className="w-full max-w-xs lg:w-auto rounded-2xl bg-amber-500 px-8 py-4 font-extrabold uppercase text-white shadow-[0_4px_0_rgb(74,124,0)] cursor-pointer transition-all hover:bg-amber-400"
+                    >
+                        Partners-Dashboard
+                    </button>
+
                 </div>
+
 
                 <div>
                     <StatsBar refreshKey={statsRefreshKey} />
