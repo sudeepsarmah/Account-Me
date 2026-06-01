@@ -4,6 +4,11 @@ Account-Me is a web application designed to help users stay accountable and comp
 
 Instead of relying solely on self-discipline, users can invite a friend or partner to track their progress, review completed tasks, and provide ratings and feedback.
 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://account-me-zeta.vercel.app/)
+
+🔗 **Live Application:** https://account-me-zeta.vercel.app/
+
+Stay accountable with the help of an accountability partner.
 ---
 
 ## Features
