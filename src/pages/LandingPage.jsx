@@ -39,7 +39,7 @@ export default function LandingPage() {
                             alt="screenshot1"
                         />
 
-                        <div className="text-2xl sm:text-3xl font-extrabold text-lime-500 wrap-break-word">
+                        <div className="max-w-full px-4 text-center lg:text-left">
 
                             <h3 className="max-w-full px-4 text-center lg:text-left">
                                 Ask your friend to be your helper.
