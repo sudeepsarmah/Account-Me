@@ -154,13 +154,14 @@ export default function ContactForm() {
                             "
                             />
                         </div>
+                        <div className="flex justify-center">
+                            <ReCAPTCHA
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                onChange={() => setIsVerified(true)}
+                                onExpired={() => setIsVerified(false)}
+                                ref={recaptchaRef}
+                            /></div>
 
-                        <ReCAPTCHA
-                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                            onChange={() => setIsVerified(true)}
-                            onExpired={() => setIsVerified(false)}
-                            ref={recaptchaRef}
-                        />
 
 
                         {/* Character Counter */}
