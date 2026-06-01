@@ -1,5 +1,0 @@
-1. Fix mobile view of dashboard, landing page, documentation, footer and navbar
-2. Upload to Github, and deploy on vercel
-3. Share on sites
-4. Configure the Github link on navbar
-5. Upload the screenshots on landing page

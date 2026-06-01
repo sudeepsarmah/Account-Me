@@ -1,5 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom"
-
+import inviteScreenshot from "../assets/inviteScreenshot.png"
+import tasksRating from "../assets/TasksRating.png"
+import streaks from "../assets/Streaks.png"
 
 export default function LandingPage() {
     const navigate = useNavigate()
@@ -10,9 +12,9 @@ export default function LandingPage() {
                 <div className=" mb-4 ">
                     <h1 className="mb-6 text-center font-serif text-4xl font-extrabold tracking-wide md:text-7xl">It's easier when we have someone looking out for us.</h1>
                     <div className="flex flex-col gap-8 md:flex-row md:justify-between">
-                        <p className="flex items-center text-center text-lg md:max-w-164 md:px-8 md:text-2xl">Having difficulty finishing your tasks? Can't find to hold yourself accountable? Long list of pending tasks?</p>
+                        <p className="flex items-center italic text-center text-lg md:max-w-164 md:px-8 md:text-3xl md:font-semibold">Having difficulty finishing your tasks? Can't find to hold yourself accountable? Long list of pending tasks?</p>
                         <div>
-                            <h2 className="mb-4 text-center text-2xl md:px-8 md:text-3xl">Find yourself a partner today to keep yourself held accountable today.</h2>
+                            <h2 className="mb-4 text-center text-2xl md:px-8 md:text-2xl">Find yourself a partner today to keep yourself held accountable today.</h2>
                             <div className="flex flex-col items-center gap-y-6 mb-8">
                                 <button
                                     onClick={() => navigate('/signup')}
@@ -37,11 +39,11 @@ export default function LandingPage() {
                 w-full
                 max-w-sm
                 rounded-2xl
-                border
+                
                 shadow-lg
                 md:max-w-md
             "
-                            src=""
+                            src={inviteScreenshot}
                             alt="screenshot1"
                         />
 
@@ -85,12 +87,12 @@ export default function LandingPage() {
                 w-full
                 max-w-sm
                 rounded-2xl
-                border
+                
                 shadow-lg
                 md:max-w-md
                 lg:order-2
             "
-                            src=""
+                            src={tasksRating}
                             alt="screenshot2"
                         />
 
@@ -105,11 +107,11 @@ export default function LandingPage() {
                 w-full
                 max-w-sm
                 rounded-2xl
-                border
+                
                 shadow-lg
                 md:max-w-md
             "
-                            src=""
+                            src={streaks}
                             alt="screenshot3"
                         />
 
