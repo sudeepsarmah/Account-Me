@@ -257,7 +257,14 @@ export default function Dashboard() {
                 ? { ...t, status: "checkedIn", ...(signedUrl && { signedUrl }) }
                 : t
         ))
-        if (new Date(actualCheckInTime) > new Date(tasksData[0].check_in_time)) {
+        // e.g. "19:55:00" or "19:55"
+        const scheduledRaw = tasksData[0].check_in_time
+        // start with actual date as base
+        const scheduledDate = new Date(actualCheckInTime)
+        const [hours, minutes] = scheduledRaw.split(":")
+        scheduledDate.setHours(Number(hours), Number(minutes), 0, 0)
+
+        if (new Date(actualCheckInTime) > scheduledDate) {
             setTaskMessages(prev => ({
                 ...prev,
                 [task.task_key]: "You checked in late"

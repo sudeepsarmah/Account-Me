@@ -25,10 +25,13 @@ export default function TaskList({ tasks, onCheckIn, taskMessages }) {
             {tasks.map((task) => {
                 // tasks is an array so tasks.check_in_time is undefined — you can't call .slice() on it. This calculation needs to happen inside the .map() for each individual task object.
                 const checkInTime = task.check_in_time.slice(11, 16)
-                const now = new Date()
                 const dueDate = new Date(task.due_date)
-                const timeLeft = dueDate - now
-                const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24))
+                const today = new Date()
+                // Zero out time components for a pure date comparison
+                dueDate.setHours(0, 0, 0, 0)
+                today.setHours(0, 0, 0, 0)
+                const timeLeft = dueDate - today
+                const daysLeft = Math.round(timeLeft / (1000 * 60 * 60 * 24))
                 return (
                     /* Multiple id attributes on repeated elements is incorrect - id is meant to be unique on a page — only one element should have a given id. Since you're rendering multiple tasks, you'll end up with multiple elements sharing */
 
